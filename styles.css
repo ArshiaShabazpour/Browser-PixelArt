@@ -1,0 +1,40 @@
+#grids {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  flex:5 1 0
+}
+#tools{
+    flex:2 1 0;
+    background-color: red;
+}
+#grids > div {
+  border: 1px solid #ccc;
+  background: white;
+  aspect-ratio: 1 / 1;   
+  box-sizing: border-box;
+}
+#topbar{
+    text-align: left;
+    background-color: aquamarine;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+#content{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+}
+h1{
+    margin: 0;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}

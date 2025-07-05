@@ -2,17 +2,28 @@
   display: flex;
   flex-wrap: wrap;
   border: 1px solid #ccc;
-  flex:5 1 0
+  width: 500px;
+  height: 500px;
+  min-width: 300px;
+  min-height: 300px;
 }
 #tools{
-    flex:2 1 0;
-    background-color: red;
+    width: 200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#tools button{
+  width: 100%;
 }
 #grids > div {
   border: 1px solid #ccc;
   background: white;
-  aspect-ratio: 1 / 1;   
   box-sizing: border-box;
+  min-width: 0;
 }
 #topbar{
     text-align: left;
@@ -23,8 +34,12 @@
 }
 #content{
     display: flex;
-    justify-content: space-around;
-    height: 100vh;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap-reverse;
+    align-items: center;
 }
 h1{
     margin: 0;
@@ -34,7 +49,40 @@ html, body {
   padding: 0;
   height: 100%;
 }
-body {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 1200px) {
+  #content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) {
+  #content {
+    gap: 50px;
+  }
+
+  #tools {
+    width: 150px;
+    gap: 16px;
+  }
+
+
+  #grids {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 650px) {
+  #topbar {
+    font-size: 10px;
+  }
+
+  #content {
+    flex-direction: column-reverse;
+  }
+
+  #grids {
+    width: 300px;
+    height: 300px;
+  }
 }

@@ -1,7 +1,7 @@
 #grids {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #ccc;
+  border: 1px solid #ff0000;
   width: 500px;
   height: 500px;
   min-width: 300px;
@@ -20,11 +20,11 @@
   width: 100%;
 }
 #tools button.active {
-  background-color: #4CAF50;    /* or whatever highlight */
+  background-color: #4CAF50;
   color: white;
 }
 #grids > div {
-  border: 1px solid #ccc;
+  /*border: 1px solid #ccc;*/
   background: white;
   box-sizing: border-box;
   min-width: 0;
@@ -44,6 +44,9 @@
     margin: 0 auto;
     flex-wrap: wrap-reverse;
     align-items: center;
+}
+.slidecontainer{
+  text-align: center;
 }
 h1{
     margin: 0;
@@ -89,4 +92,33 @@ html, body {
     width: 300px;
     height: 300px;
   }
+}
+.slidecontainer{
+  width: 100%;
+}
+.slider{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+}
+.slider:hover {
+  opacity: 1; 
+}
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  background: #04AA6D; 
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px; 
+  height: 25px; 
+  background: #04AA6D; 
+  cursor: pointer; 
 }

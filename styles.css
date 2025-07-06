@@ -19,6 +19,10 @@
 #tools button{
   width: 100%;
 }
+#tools button.active {
+  background-color: #4CAF50;    /* or whatever highlight */
+  color: white;
+}
 #grids > div {
   border: 1px solid #ccc;
   background: white;

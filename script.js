@@ -87,7 +87,7 @@ function draw(e){
     e.target.style.background = colordiv.value;
   }
   else if(mode == "eraser"){
-    e.target.style.background = "white";
+    e.target.style.background = "#ffffff";
   }
   else if(mode == "rainbow"){
     let R = Math.floor(Math.random() * 256)

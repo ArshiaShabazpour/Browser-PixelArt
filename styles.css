@@ -13,7 +13,10 @@ html, body {
   font-family: 'Press Start 2P', monospace;
   user-select: none;
 }
-
+#topbar{
+  display: flex;
+  justify-content: space-between;
+}
 html, body {
   height: 100%;
   margin: 0;
@@ -269,4 +272,21 @@ button, input, .slider {
 #footer{
   text-align: center;
   margin-bottom: 10px;
+}
+#save {
+  background: #3f0072;         /* same deep purple base */
+  color: #cdcccc;              /* same light-gray text */
+  border: 2px solid #666;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background .1s, box-shadow .1s;
+  margin-right: 4px;
+}
+
+#save:hover {
+  background: #522088;         /* slightly lighter on hover */
+  box-shadow:
+    0 0 4px #3f0072,
+    0 0 8px #3f0072,
+    0 0 12px rgba(100, 100, 255, 0.6);
 }

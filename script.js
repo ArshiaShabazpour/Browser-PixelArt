@@ -104,6 +104,23 @@ function draw(e){
     e.target.style.background = tweakRGB(current, -0.10);
   }
 }
+
+const saveButton = document.getElementById('save');
+saveButton.addEventListener('click', () => {
+  html2canvas(document.getElementById('grids'))
+    .then(canvas => {
+      const link = document.createElement('a');
+      link.download = 'my-pixel-art.png';
+      link.href = canvas.toDataURL();
+      link.click();
+    })
+    .catch(err => {
+      console.error('Snapshot failed:', err);
+    });
+});
+
+
+
 function color_picker(e){
   if(mode == "colorpicker"){
     const rgb = e.target.style.backgroundColor || "rgb(255,255,255)";

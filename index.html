@@ -6,18 +6,26 @@
     <title>PixelArt</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+        rel="stylesheet"
+    />
+    <style>
+        html, body {
+            font-family: 'Press Start 2P', monospace;
+        }
+    </style>
 </head>
 <body>
     <div id = "topbar">
-        <h1>LOGO</h1>
+        <h1>Cosmo-Sketch</h1>
     </div>
     <div id="content">
         <div id = "tools">
                 <div>
-                    <input type="color" id="head" name="head" value="#e66465" />
-                    <label for="head">Head</label>
+                    <input type="color" id="head" name="head" value="#66F2A7" />
                 </div>
-                <button id ="brush">brush</button>
+                <button id ="brush" class="active">brush</button>
                 <button id="rainbow">rainbow</button>
                 <button id="eraser">eraser</button>
                 <button id="shader">shader</button>
@@ -26,11 +34,11 @@
                 <button id ="reset">reset</button>
                 <div class="slidecontainer">
                     <div id="size-text">16 x 16</div>
-                    <input type="range" min="2" max="64" value="16" class="slider" id="myRange" name="slider">
+                    <input type="range" min="8" max="64" value="16" class="slider" id="myRange" name="slider">
                 </div>
         </div>
         <div id ="grids"></div>
     </div>
-    <div id="footer">text</div>
+    <footer id="footer">Made By Arshiya Sh</footer>
 </body>
 </html>

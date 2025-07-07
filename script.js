@@ -118,6 +118,8 @@ function buildGrid(size) {
   for (let i = 0; i < size * size; i++) {
     const cell = document.createElement("div");
     cell.style.flex = `1 1 ${100 / size}%`;
+    cell.draggable = false;
+    cell.addEventListener("dragstart", e => e.preventDefault());
     cell.addEventListener("mouseenter",  draw);
     cell.addEventListener("mousedown",  draw);
     cell.addEventListener("click",color_picker)

@@ -33,7 +33,7 @@ toolButtons.forEach(button => {
 function resetcanvas(){
   array = document.querySelectorAll('#grids div');
   array.forEach(cell => {
-    cell.style.background = "white";
+    cell.style.background = '#ffffff';
   });
 }
 
@@ -136,6 +136,7 @@ function buildGrid(size) {
     const cell = document.createElement("div");
     cell.style.flex = `1 1 ${100 / size}%`;
     cell.draggable = false;
+    cell.style.background = "rgb(255,255,255)";
     cell.addEventListener("dragstart", e => e.preventDefault());
     cell.addEventListener("mouseenter",  draw);
     cell.addEventListener("mousedown",  draw);

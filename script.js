@@ -76,11 +76,8 @@ function tweakRGB(color, percent) {
 }
 
 
-
 let resetbutton = document.querySelector("#reset");
 resetbutton.addEventListener('click',resetcanvas);
-
-
 
 
 function draw(e){
@@ -148,4 +145,24 @@ buildGrid(gridSize);
 
 slider.addEventListener("change",(e)=>{buildGrid(e.target.value)});
 slider.addEventListener("input",(e)=>{ let slider_text = document.querySelector("#size-text");
-  slider_text.textContent =`${e.target.value} X ${e.target.value}`})
+slider_text.textContent =`${e.target.value} X ${e.target.value}`})
+
+document.addEventListener('DOMContentLoaded', () => {
+  const colorInput = document.getElementById('head');
+  if (!colorInput) return;
+  
+  function updateColorGlow(e) {
+    const hex = e.target.value;         
+    const semi = hex + '80';            
+    
+    colorInput.style.setProperty(
+      'box-shadow',
+      `0 0 4px ${hex}, 0 0 12px ${semi}`,
+      'important'
+    );
+  }
+
+  updateColorGlow({ target: colorInput });
+
+  colorInput.addEventListener('input', updateColorGlow);
+});

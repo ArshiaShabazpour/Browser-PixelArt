@@ -127,7 +127,6 @@ body {
   width: 100%;
 }
 
-/* 8. Slider styling */
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -160,7 +159,6 @@ body {
   image-rendering: pixelated;
 }
 
-/* 9. Size text & footer */
 #size-text, h1, #footer {
   user-select: none;
 }
@@ -180,7 +178,7 @@ body {
   #content { justify-content: center; }
 }
 @media (max-width: 850px) {
-  #content { gap: 50px; }
+  #content { gap: 50px;}
   #tools {
     width: 150px;
     gap: 16px;
@@ -254,17 +252,21 @@ button, input, .slider {
     0 0 8px rgba(128, 128, 128, 0.5),
     0 0 16px rgba(128, 128, 128, 0.3);
 }
-#tools #reset {
-  background: #3f0072;        
-  color: #cdcccc;
-  border: 2px solid #666;  
+#tools #reset, #save {
+  background: #FF9066;         
+  color: #000;                 
+  border: 2px solid #FFB088;   
+  box-shadow:
+    0 0 4px #FF9066,
+    0 0 8px rgba(255, 144, 102, 0.6);
+  transition: background .1s, box-shadow .1s;
 }
 
-#tools #reset:hover {
+#tools #reset:hover, save:hover {
+  background: #FFAA88;         
   box-shadow:
-    0 0 4px #3f0072,
-    0 0 8px #3f0072,
-    0 0 12px rgba(100, 100, 255, 0.6);
+    0 0 6px #FF9066,
+    0 0 12px rgba(255, 144, 102, 0.8);
 }
 #size-text{
   margin: 4px;
@@ -274,19 +276,32 @@ button, input, .slider {
   margin-bottom: 10px;
 }
 #save {
-  background: #3f0072;         /* same deep purple base */
-  color: #cdcccc;              /* same light-gray text */
-  border: 2px solid #666;
+  background: #FF9066;        
+  color: #000;                 
+  border: 2px solid #FFB088;   
   padding: 0.5rem;
   cursor: pointer;
   transition: background .1s, box-shadow .1s;
   margin-right: 4px;
+  box-shadow:
+    0 0 4px #FF9066,
+    0 0 8px rgba(255, 144, 102, 0.6);
 }
 
 #save:hover {
-  background: #522088;         /* slightly lighter on hover */
+  background: #FFAA88;        
   box-shadow:
-    0 0 4px #3f0072,
-    0 0 8px #3f0072,
-    0 0 12px rgba(100, 100, 255, 0.6);
+    0 0 6px #FF9066,
+    0 0 12px rgba(255, 144, 102, 0.8);
+}
+h1 {
+  color: #66F2A7;  
+  text-shadow:
+    0 0 3px #66F2A7,
+    0 0 6px #66F2A7,
+    0 0 9px rgba(0,255,150,0.6);
+}
+button,  #tools button {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 15px;
 }
